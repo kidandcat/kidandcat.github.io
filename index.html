@@ -65,6 +65,14 @@
             background-position: 50% 50%;
             z-index: 1;
         }
+
+        #swal2-content {
+            color: rgb(231, 231, 231)
+        }
+
+        #swal2-title {
+            color: rgb(214, 214, 214)
+        }
     </style>
 </head>
 
@@ -236,23 +244,26 @@
         const perfData = window.performance.timing;
         const pageLoadTime = perfData.responseEnd - perfData.requestStart;
         if (pageLoadTime < 60) {
-            swal(
-                'Perfect Network Performance!',
-                'This network request lasted ' + pageLoadTime + 'ms only!',
-                'success'
-            )
+            swal({
+                title: 'Perfect Network Performance!',
+                text: 'This network request lasted ' + pageLoadTime + 'ms only!',
+                type: 'success',
+                background: "#212121"
+            })
         } else if (pageLoadTime < 140) {
-            swal(
-                'Not so good Network Performance',
-                'This network request lasted ' + pageLoadTime + 'ms, that\'s not the best network speed',
-                'warning'
-            )
+            swal({
+                title: 'Not so good Network Performance',
+                text: 'This network request lasted ' + pageLoadTime + 'ms, that\'s not the best network speed',
+                type: 'warning',
+                background: "#212121"
+            })
         } else {
-            swal(
-                'Bad Network Performance',
-                'This network request lasted ' + pageLoadTime + 'ms, that\'s a very long request mate :(',
-                'error'
-            )
+            swal({
+                title: 'Bad Network Performance',
+                text: 'This network request lasted ' + pageLoadTime + 'ms, that\'s a very long request mate :(',
+                type: 'error',
+                background: "#212121"
+            })
         }
     </script>
 </body>
