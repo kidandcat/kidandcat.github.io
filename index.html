@@ -235,17 +235,23 @@
 
         const perfData = window.performance.timing;
         const pageLoadTime = perfData.responseEnd - perfData.requestStart;
-        if (pageLoadTime < 50) {
+        if (pageLoadTime < 60) {
             swal(
                 'Perfect Network Performance!',
                 'This network request lasted ' + pageLoadTime + 'ms only!',
                 'success'
             )
+        } else if (pageLoadTime < 140) {
+            swal(
+                'Not so good Network Performance',
+                'This network request lasted ' + pageLoadTime + 'ms, that\'s not the best network speed',
+                'warning'
+            )
         } else {
             swal(
                 'Bad Network Performance',
                 'This network request lasted ' + pageLoadTime + 'ms, that\'s a very long request mate :(',
-                'warning'
+                'error'
             )
         }
     </script>
