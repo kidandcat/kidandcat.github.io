@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/reveal.js/css/reveal.css">
     <link rel="stylesheet" href="/reveal.js/css/theme/league.css">
+    <link rel="stylesheet" href="/atom-one-dark.css">
     <script src="/reveal.js/lib/js/head.min.js"></script>
     <script src="/reveal.js/js/reveal.js"></script>
 </head>
@@ -17,6 +18,25 @@
         <div class="slides">
             <section>
                 <a style="font-size: 3em" href="https://reactjs.org/">ReactJS</a>
+            </section>
+            <section data-background-color="white" data-background-iframe="https://reactjs.org/"></section>
+            <section>
+                <pre><code data-trim>
+                    class HelloMessage extends React.Component {
+                        render() {
+                            return (
+                                <div>
+                                    Hello {this.props.name}
+                                </div>
+                            );
+                        }
+                    }
+                    
+                    ReactDOM.render(
+                        <HelloMessage name="Taylor"></HelloMessage>,
+                        mountNode
+                    );
+                </code></pre>
             </section>
         </div>
     </div>
