@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/reveal.js/css/theme/league.css">
+    <link rel="stylesheet" href="/vendor/atom-one-dark.css">
+    <script src="/reveal.js/lib/js/head.min.js"></script>
+    <script src="/reveal.js/js/reveal.js"></script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>ReactJS</h1>
+            </section>
+            <section data-background-color="white" data-background-iframe="https://reactjs.org/"></section>
+            <section>
+                <div>
+                    Init npm
+                </div>
+                <pre><code data-trim>
+                    npm init -y
+                </code></pre>
+            </section>
+            <section>
+                <div>
+                    Install dependencies
+                </div>
+                <pre><code data-trim>
+                    npm install react react-dom parcel-bundler
+                </code></pre>
+            </section>
+            <section>
+                <div>
+                    Add start script to package.json
+                </div>
+                <pre><code data-trim>
+                    "scripts": {
+                        "start": "parcel index.html"
+                    }
+                </code></pre>
+            </section>
+            <section>
+                <div>Generate html code</div>
+                <img src="/images/vscode-html5.png" alt="">
+            </section>
+            <section>
+                <div>index.html</div>
+                <pre><code data-trim style="position: absolute; max-height: 2000px">
+                    <!--
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                            <title>ReactJS</title>
+                        </head>
+                        <body>
+                            <div id="root"></div>
+                            <script src="index.jsx"></script>
+                        </body>
+                        </html>
+                    -->
+                </code></pre>
+            </section>
+            <section>
+                <div>
+                    index.js
+                </div>
+                <pre><code data-trim>
+                    class HelloMessage extends React.Component {
+                        render() {
+                            return (
+                                <div>
+                                    Hello {this.props.name}
+                                </div>
+                            );
+                        }
+                    }
+                    
+                    ReactDOM.render(
+                        <HelloMessage name="Jairo"></HelloMessage>,
+                        document.getElementById("root")
+                    );
+                </code></pre>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        Reveal.initialize({
+            autoPlayMedia: true,
+            dependencies: [
+                { src: '/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/reveal.js/plugin/notes/notes.js', async: true },
+            ]
+        });
+    </script>
+</body>
+
+</html>

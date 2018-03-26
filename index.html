@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jairo</title>
-    <script src="/particles.min.js"></script>
+    <script src="/vendor/particles.min.js"></script>
     <!-- Alerts -->
     <script src="https://unpkg.com/sweetalert2@7.17.0/dist/sweetalert2.all.js"></script>
     <!-- UIkit-->
@@ -73,6 +73,23 @@
         #swal2-title {
             color: rgb(214, 214, 214)
         }
+
+        .slideshows-button {
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            transition: all .5s linear;
+            padding: 10px;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .slideshows-button:hover {
+            transition: all .5s linear;
+            background-color: white;
+            color: black;
+            text-decoration: none !important;
+        }
     </style>
 </head>
 
@@ -80,15 +97,15 @@
     <div id="content">
         <div class="uk-section uk-section-muted" style="background: transparent">
             <div class="uk-container">
+                <div class="uk-margin uk-text-center">
+                    <a href="/reveal" class="slideshows-button">Slideshows</a>
+                </div>
                 <div class="uk-text-center uk-margin-large">
-                    <img class="uk-border-circle avatar" src="/0.jpeg" width="200" height="200" alt="avatar">
+                    <img class="uk-border-circle avatar" src="/images/0.jpeg" width="200" height="200" alt="avatar">
                     <h2 style="color: white">Jairo Caro-Accino Viciana</h2>
                     <a href="https://www.linkedin.com/in/kidandcat/" uk-icon="icon: linkedin; ratio: 1.5"></a>
                     <a href="http://github.com/kidandcat" uk-icon="icon: github; ratio: 1.5"></a>
                     <a href="https://twitter.com/kidandcat" uk-icon="icon: twitter; ratio: 1.5"></a>
-                </div>
-                <div class="uk-margin uk-text-center">
-                    <a href="/reveal" style="color: white">Slideshows</a>
                 </div>
                 <div class="uk-grid-match uk-child-width-1-3@m uk-text-center" uk-grid>
                     <div>
@@ -142,17 +159,17 @@
                     <div class="uk-grid-match uk-child-width-1-3@m uk-text-center" uk-grid>
                         <div>
                             <a style="color: #2079ad" href="https://www.netelip.com/">
-                                <img style="height: 30px" src="/netelip.svg" alt="">
+                                <img style="height: 30px" src="/images/netelip.svg" alt="">
                             </a>
                         </div>
                         <div>
                             <a style="color: #67a038" href="https://indigitall.net/">
-                                <img style="height: 50px; margin-top:-14px" src="/indigitall.png">
+                                <img style="height: 50px; margin-top:-14px" src="/images/indigitall.png">
                             </a>
                         </div>
                         <div>
                             <a style="color: #fed430" href="http://accenture.es/">
-                                <img style="height: 30px; filter: invert(100%);" src="/accenture.png">
+                                <img style="height: 30px; filter: invert(100%);" src="/images/accenture.png">
                             </a>
                         </div>
                     </div>

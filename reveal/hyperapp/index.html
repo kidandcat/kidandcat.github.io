@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <link rel="stylesheet" href="/reveal.js/css/reveal.css">
     <link rel="stylesheet" href="/reveal.js/css/theme/league.css">
-    <link rel="stylesheet" href="/atom-one-dark.css">
     <script src="/reveal.js/lib/js/head.min.js"></script>
     <script src="/reveal.js/js/reveal.js"></script>
 </head>
@@ -17,26 +15,9 @@
     <div class="reveal">
         <div class="slides">
             <section>
-                <a style="font-size: 3em" href="https://reactjs.org/">ReactJS</a>
-            </section>
-            <section data-background-color="white" data-background-iframe="https://reactjs.org/"></section>
-            <section>
-                <pre><code data-trim>
-                    class HelloMessage extends React.Component {
-                        render() {
-                            return (
-                                <div>
-                                    Hello {this.props.name}
-                                </div>
-                            );
-                        }
-                    }
-                    
-                    ReactDOM.render(
-                        <HelloMessage name="Taylor"></HelloMessage>,
-                        mountNode
-                    );
-                </code></pre>
+                <div>
+                    <a href="basic.html">Basic</a>
+                </div>
             </section>
         </div>
     </div>
@@ -45,9 +26,19 @@
         Reveal.initialize({
             autoPlayMedia: true,
             dependencies: [
+                // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+                { src: '/reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                // Interpret Markdown in <section> elements
+                { src: '/reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '/reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                // Syntax highlight for <code> elements
                 { src: '/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                // Zoom in and out with Alt+click
                 { src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                // Speaker notes
                 { src: '/reveal.js/plugin/notes/notes.js', async: true },
+                // MathJax
+                { src: '/reveal.js/plugin/math/math.js', async: true }
             ]
         });
     </script>
